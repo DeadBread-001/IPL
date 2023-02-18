@@ -1,0 +1,106 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        username: "Имя аккаунта"
+        email: "Почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        current_password: "Текущий пароль"
+        remember_me: "Запомнить меня"
+      discussion:
+        title: "Заголовок"
+        content: "Текст"
+      reply:
+        reply: "Комментарий"
+      password:
+        blank:
+  datetime:
+    distance_in_words:
+      less_than_x_minutes:
+        one: "меньше минуты"
+        other: "меньше %{count} минут"
+      x_minutes:
+        one: "1 минуту"
+        other: "%{count} минут"
+      about_x_hours:
+        one: "около 1 часа"
+        other: "около %{count} часов"
+  layouts:
+    application:
+      discussions: "Обсуждения"
+      new: "Новое обсуждение"
+      change: "Сменить язык"
+      account: "Аккаунт"
+      log_out: "Выйти"
+      sign_up: "Зарегистрироваться"
+      log_in: "Войти"
+  controllers:
+    channels_controller:
+      created: "Канал был успешно создан."
+      updated: "Канал был успешно обновлен."
+      destroyed: "Канал был успешно удален."
+    discussion_controller:
+      created: "Обсуждение было успешно создано."
+      updated: "Обсуждение было успешно обновлено."
+      destroyed: "Обсуждене было успешно удалено."
+    replies_controller:
+      not_save: "Комментарий не сохранился. Попробуйте еще раз."
+      updated: "Комментарий успешн обновился."
+  shared:
+    discussions:
+      latest: "Последние обсуждения"
+      posted: "Опубликовано"
+      ago: "назад"
+      by: "от"
+      edit: "Редактировать"
+      delete: "Удалить"
+      in: "в"
+  discussions:
+    sidebar:
+      channels: "Каналы"
+      new: "Новый канал"
+    form:
+      channel: "Канал"
+      select: "Выберите канал"
+      create: "Создать обсуждение"
+    new:
+      back: "Назад"
+    show:
+      edit: "Редактировать обсуждение"
+      replies: "Комментарии"
+      new_rep: "Оставить комментарий"
+      need: "Чтобы вам оставить комментарий вы должны"
+      login: "войти"
+      sign_up: "Зарегистрироваться"
+      dont: "Нет аккаунта?"
+  devise:
+    registrations:
+      edit:
+        edit: "Редактировать аккаунт"
+        curr: "Вы являетесь"
+        admin: "администратором"
+        of_app: "приложения Обсуждения."
+        hint1: "оставьте поле пусты, если не хотите менять пароль"
+        hint2: "введите свой текущий пароль, чтобы подтвердить изменения"
+        update: "Обновить"
+        delete: "Удалить мой аккаунт"
+        unhappy: "Не понравилось?"
+        create: "Создать аккаунт"
+    shared:
+      links:
+        forgot: "Забыли свой пароль?"
+        didntconfirm: "Не получили письмо с инструкцией для подтверждения?"
+        didntunlock: "Не получили письмо с инструкцией для разблокировки аккаунта?"
+        sign_with: "Войти с"
+        send: "Отправьте письмо с инструкцией для сброса пароля"
+  new:
+    minimum: "Минимально"
+    char: "символов"
+  edit:
+    channel: 'Редактирование канала'
+    discussion: 'Редактирование обсуждения'
+    reply: 'Редактирование комментария'
+        
+  
+

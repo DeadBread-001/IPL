@@ -1,0 +1,31 @@
+ru:
+  simple_form:
+    "yes": 'Y98s'
+    "no": '98'
+    required:
+      text: 're98ed'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      invalid: 'Invalid email or password'
+      labels:
+        defaults:
+          password: 'Pass87word'
+        user:
+          new:
+            email: 'E-m87ail to sign in.'
+          edit:
+            email: 'E-87mail.'
+      hints:
+        defaults:
+          username: 'Use8787r name to sign in.'
+          password: 'No s87pecial characters, please.'
+      include_blanks:
+        defaults:
+          age: 'Rath878er not say'
+      prompts:
+        defaults:
+          age: 'Sel787ect your age'
+

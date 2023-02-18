@@ -1,0 +1,7 @@
+<p>All users:</p>
+<% if @uses.present? %><%end%>
+<%@users.each_with_index do |user, index|%>
+  <p><%= (index + 1).to_s + ". " + user.email %></p>
+<%end%>
+
+<%= button_to "Go back", calc_input_path, :method => :get %>

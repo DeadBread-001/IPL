@@ -1,0 +1,38 @@
+<div class="columns">
+  <div class="column is-8">
+    <h1 class="title is-2 has-text-grey discussion-title"><%= @discussion.title %></h1>
+    <h3 class="subtitle is-5 has-text-grey-lighter"><%= t("shared.discussions.by")%> <%= @discussion.user.username %> <%= t("shared.discussions.in")%> <%= link_to @discussion.channel.channel, @discussion.channel %></h3>
+    <div class="level">
+      <div class="level-left"></div>
+      <div class="level-right">
+        <% if discussion_author(@discussion) || has_role?(:admin) %>
+            <div class="buttons">
+                <%= link_to t("discussions.show.edit"), edit_discussion_path(@discussion), class:'button'%>
+                <%= link_to t("shared.discussions.delete"), discussion_path(@discussion), method: :delete, data: { confirm: "Delete discussion?" }, class:'button' %>
+            </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="content"><%= markdown(@discussion.content) %></div>
+
+    <h2 class="subtitle is-5 has-text-grey"><%= @discussion.replies.count %> <%= t("discussions.show.replies") %></h2>
+
+    <div id="discussion-replies">
+      <%= render @discussion.replies %>
+    </div>
+
+    <hr />
+
+    <h3 class="subtitle is-3 has-text-grey"> <%= t("discussions.show.new_rep") %></h3>
+    <% if user_signed_in? %>
+      <%= render 'replies/form' %>
+    <% else %>
+    <p><%= t("discussions.show.need")%> <%= link_to t("discussions.show.login"), new_user_session_path %>. <%= t("discussions.show.dont")%>
+      <%= link_to t("discussions.show.sign_up"), new_user_registration_path %></p>
+    <% end %>
+
+  </div>
+
+  <%= render 'sidebar' %>
+
+</div>

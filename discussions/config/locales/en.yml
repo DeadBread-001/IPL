@@ -1,0 +1,105 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        username: "Username"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        current_password: "Current password"
+        remember_me: "Remember me"
+      discussion:
+        title: "Title"
+        content: "Content"
+      reply:
+        reply: "Reply"
+  datetime:
+    distance_in_words:
+      less_than_x_minutes:
+        one: "less than a minute"
+        other: "less than %{count} minutes"
+      x_minutes:
+        one: "1 minute"
+        other: "%{count} minutes"
+      about_x_hours:
+        one: "about 1 hour"
+        other: "about %{count} hours"
+  layouts:
+    application:
+      discussions: "Discussions"
+      new: "New discussion"
+      change: "Change language"
+      account: "Account"
+      log_out: "Log Out"
+      sign_up: "Sign Up"
+      log_in: "Log In"
+  controllers:
+    channels_controller:
+      created: "Channel was successfully created."
+      updated: "Channel was successfully updated."
+      destroyed: "Channel was successfully destroyed."
+    discussion_controller:
+      created: "Discussion was successfully created."
+      updated: "Discussion was successfully updated."
+      destroyed: "Discussion was successfully destroyed."
+    replies_controller:
+      not_save: "Reply did not save. Please try again"
+      updated: "Reply was successfully updated."
+  shared:
+    discussions:
+      latest: "Latest discussions"
+      posted: "Posted"
+      ago: "ago in"
+      by: "by"
+      edit: "Edit"
+      delete: "Delete"
+      in: "in"
+  discussions:
+    sidebar:
+      channels: "Channels"
+      new: "New Channel"
+    form:
+      channel: "Channel"
+      select: "Select channel"
+      create: "Create discussion"
+    new:
+      back: "Back"
+    show:
+      edit: "Edit Discussion"
+      replies: "Replies"
+      new_rep: "Leave a reply"
+      need: "To reply you need to"
+      login: "login"
+      sign_up: "Sign up"
+      dont: "Don't have an account?"
+  devise:
+    registrations:
+      edit:
+        edit: "Edit account"
+        curr: "You are currently an"
+        admin: "admin"
+        of_app: "of the Discussions application."
+        hint1: "leave it blank if you don't want to change it"
+        hint2: "we need your current password to confirm your changes"
+        update: "Update"
+        delete: "Delete my account"
+        unhappy: "Unhappy?"
+        create: "Create User"
+    shared:
+      links:
+        forgot: "Forgot your password?"
+        didntconfirm: "Didn't receive confirmation instructions?"
+        didntunlock: "Didn't receive unlock instructions?"
+        sign_with: Sign in with
+        send: "Send me reset password instructions"
+  new:
+    minimum: "Minimum"
+    char: "characters"
+  edit:
+    channel: 'Editing Channel'
+    discussion: 'Editing Discussion'
+    reply: 'Editing Reply'
+
+        
+  
+

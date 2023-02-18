@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>AJAX lr9 test</title>
+     <script>
+            lr9_url= location.protocol + "//" + location.host + "/lr9/view.json"
+            function send_query(){
+            var frm = document.forms.lr9_form;
+            var param_str = "";
+            param_str = "?" + "val=" + frm.val.value;
+            if (param_str == "") return false;
+            var my_JSON_object = {};
+            var http_request = new XMLHttpRequest();
+            http_request.open("GET", lr9_url+param_str, true);
+            http_request.onreadystatechange = function () {
+            var done = 4, ok = 200;
+            if (http_request.readyState == done &&
+            http_request.status == ok) {
+            my_JSON_object = JSON.parse(http_request.responseText);
+            show_result(my_JSON_object);
+            }
+            };
+            http_request.send(null);
+            return false;
+            }
+            function makeTableHTML(myArray) {
+                var result = "<table border=1>";
+                for(var i=0; i<myArray.length; i++) {
+                    result += "<tr>";
+                    for(var j=0; j<myArray[i].length; j++){
+                        result += "<td>"+myArray[i][j]+"</td>";
+                    }
+                    result += "</tr>";
+                }
+                result += "</table>";
+
+                return result;
+            }
+            function show_result(data){
+            // var result = document.getElementById("result");
+            // result.innerHTML = makeTableHTML(data.correct)
+                var result = document.getElementById("result");
+                if (data.correct == "true") {
+                    result.innerHTML = "<hr/>" + makeTableHTML(data.value) + "<div>" + data.value + "</div>" + "<hr/><p>"+Date()+"</p>"; 
+                } else { result.innerHTML = "<hr/>" + data.value + "<hr/><p>"+Date()+"</p>"; }
+            }
+ </script> 
+</head>
+<body>
+    <h1>Макаров Никита. ИУ6-34Б. Лабораторная работа №9</h1>
+<form name="lr9_form" accept-charset="UTF-8" method="get">
+    <label for="______________n___10_6:">Введите число n ≤ 10^6:</label>
+    <input type="text" id="val"/>
+    <input name="commit" type="submit" value="Выполнить" onclick="return send_query();" />
+</form>
+<div id="result"></div>
+</body>
+</html>

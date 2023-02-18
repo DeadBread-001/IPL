@@ -1,0 +1,27 @@
+<h1>Макаров Никита. ИУ6-34Б. Лабораторная работа №8</h1>
+<% if @correct_input %>
+<pre>
+Все меньшие n (n ≤ 10^6) натуральные числа,
+которые являются палиндромами как в десятичной, так
+и в двоичной системе</pre>
+    <table border="1" cellpadding="4">
+    <tr>
+        <th>Число в десятичной системе</th>
+        <th>Число в двоичной системе</th>
+    </tr>
+    <tr>
+    <% @res.each do |row| %>
+        <tr>
+        <% row.each do |value| %>
+            <td>
+            <%= value%>
+            </td>
+        <% end %>
+        </tr>
+    <% end %>
+    </tr>
+    </table>
+<% else %>
+<p id="result", style="color: red"><%=@res%><p>
+<% end %>
+<%= link_to "Ввести другое число", :lr9_input %>
